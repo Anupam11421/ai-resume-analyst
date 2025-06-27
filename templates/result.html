@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Analysis Result</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Analysis Result</h1>
+
+    <div class="result-box">
+      <p class="ai-message">🧠 <strong>AI Suggestions:</strong></p>
+      <div class="suggestions">
+        {% for line in result.split('\n') if line %}
+          <p>🔹 {{ line }}</p>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="btn-group">
+      <a href="/" class="btn-back">🔙 Analyze Another Resume</a>
+      <button class="btn-download" onclick="window.print()">📥 Download as PDF</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #141E30, #243B55);
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #1f1f1f;
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    border-radius: 16px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+    color: #00ffff;
+    position: relative;
+}
+
+/* ✅ Glowing animated robot emoji */
+h1::after {
+    content: "🤖";
+    position: absolute;
+    margin-left: 10px;
+    animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #00ffff; }
+    to { text-shadow: 0 0 20px #00ffff; }
+}
+
+input[type="file"],
+textarea,
+button {
+    width: 100%;
+    margin: 12px 0;
+    padding: 14px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    background: #292929;
+    color: #ddd;
+    cursor: pointer;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+    background-color: #292929;
+    color: #eee;
+}
+
+button {
+    background: #00ffff;
+    color: #000;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00cccc;
+}
+
+/* ✅ Custom CSS Spinner */
+#spinner {
+    margin-top: 20px;
+}
+
+.loader-spinner {
+    width: 3rem;
+    height: 3rem;
+    border: 0.4rem solid #fff;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    animation: rotateLoaderSpinner 1s linear infinite;
+}
+
+@keyframes rotateLoaderSpinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Footer Style (optional) */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Hidden Utility */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,32 @@
+<!-- ✅ index.html (Final with CSS Spinner) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Resume Analyst</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>📄 AI Resume Analyst</h1>
+    <form action="/analyze" method="post" enctype="multipart/form-data" id="resumeForm">
+      <label for="resume">📤 Upload your Resume (PDF)</label>
+      <input type="file" name="resume" accept="application/pdf" required>
+
+      <label for="jd">🧾 Paste the Job Description (Optional)</label>
+      <textarea name="jd" placeholder="Paste JD here for matching..." rows="6"></textarea>
+
+      <button type="submit">🚀 Analyze Resume</button>
+    </form>
+
+    <!-- ✅ CSS Spinner instead of broken image -->
+    <div id="spinner" class="hidden">
+      <span class="loader-spinner" aria-label="Loading..."></span>
+      <p>Analyzing your resume using AI magic 🧠✨</p>
+    </div>
+  </div>
+
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
