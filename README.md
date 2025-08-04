@@ -72,7 +72,9 @@ A smart, modern AI-powered Flask web app that:
 
 ## 🌟 Screenshots
 
-![App Preview](static/img/screenshot.png)
+![Home Page](screenshots/first.png)
+![Result Page](screenshots/second.png)
+
 
 ---
 
